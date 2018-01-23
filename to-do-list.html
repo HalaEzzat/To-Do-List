@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Local Storage Tutorial</title>
+	<style>
+		body{
+			margin:100px auto;
+			text-align: center;
+		}
+		#tdl-list{
+			border:1px solid #009688;
+			border-radius:2px;
+			width:30%;
+			color:#009688;
+			text-align: left;
+			padding:10px;
+		}
+		#td2-list{
+			border:1px solid #009688;
+			border-radius:2px;
+			width:30%;
+			color:#009688;
+			text-align: left;
+			padding:10px;
+		}
+		#search{
+			border:1px solid #009688;
+			border-radius:2px;
+			width:30%;
+			color:#009688;
+			text-align: left;
+			padding:10px;
+		}
+		div{
+			margin:20px auto;
+		}
+		.t
+		{
+			 text-decoration: line-through;
+		}
+		.remove{
+			float: right;
+			color:red;
+		}
+	</style>
+	
+</head>
+<body onload="display()">
+	<div id="tdl">
+		<div align="center" id="tdl-header">
+			<table><tr><td><input type="text" id = 'new-task' placeholder="Enter new task"></td>
+			<td><button id="add-task" onclick="add()">add</button></td></tr>
+			<tr><td><input list="tasks" onKeyPress="search(event)" id="data" name='list' placeholder="Search for task..."></td><td><select onchange="updateList()" id="selected">
+  <option value="all">All</option>
+  <option value="tasks">tasks</option>
+  <option value="done">done</option>
+</select></td></tr>
+<tr><td><input list="users" onKeyPress="addUser(event)" id="user"  placeholder="users" ></td></tr></table>
+
+		</div>		
+				<h4 align="center">search results</h4>
+		<div id="search">
+		
+		</div>
+		<h4 align="center">to-do list<h4>
+
+		<div id="tdl-list">
+		
+		</div>
+		<h4 align="center">done list<h4>
+		<div id="td2-list">
+		</div>
+		
+	</div>
+		<script src="js/to-do-list.js"></script>
+
+</body>
+
+</html>
